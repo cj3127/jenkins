@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生选课系统</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <img src="img/logo.png" alt="中南林业科技大学涉外学院">
+    <div class="box">
+        <h2>学生选课系统</h2>
+        <div class="input-box">
+            <label>账号</label>
+            <input type="text" maxlength="11">
+        </div>
+        <div class="input-box">
+            <label>密码</label>
+            <input type="password">
+        </div>
+        <div class="btn-box">
+            <a href="NoPassWord.html">忘记密码?</a>
+            <div>
+                <button id="denglu">登录</button>
+                <button id="zhuce">注册</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("denglu").onclick = function(){
+        alert("登录成功！");
+        window.location.href = "../home/index.html"; // 替换为实际注册页面的URL
+}
+    document.getElementById("zhuce").onclick = function(){
+        window.location.href = "signup.html"; // 替换为实际注册页面的URL
+}
+</script>
+</html>

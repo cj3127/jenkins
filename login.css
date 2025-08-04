@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置页面主体的样式 */
+body{
+    display: flex; /* 使用弹性布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: center; /* 垂直方向居中对齐子元素 */
+    align-items: center; /* 水平方向居中对齐子元素 */
+    height: 100vh; /* 设置高度为视口高度的100% */
+    background: url(img/login.png); /* 设置背景图片 */
+    background-size: cover; /* 让背景图像覆盖整个视口 */
+}
+
+/* 定义一个盒子样式 */
+.box{
+    position: absolute;
+    left: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 380px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px 6px rgba(162, 204, 223, 0.8);
+    border-radius: 40px;
+
+}
+
+/* 设置 .box 下的 h2 元素的样式 */
+.box > h2{
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+    font-size: 25px;
+
+}
+/* 定义输入框的样式 */
+.box .input-box{
+    display: flex; /* 使用弹性布局 */
+    flex-direction: column; /* 设置主轴方向为纵向 */
+    justify-content: center; /* 垂直居中对齐内容 */
+    align-items: start; /* 使内容从起始位置开始对齐 */
+    margin-bottom: 10px; /* 设置下边距 */
+}
+
+/* 设置输入框标签的样式 */
+.box .input-box > label {
+    margin-bottom: 5px;
+    color:rgba(255,255,255,0.9);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* 输入框样式设置 */
+.box .input-box > input{
+    /* 
+      设置盒模型的行为，使元素的宽度和高度包括内边距和边框。 
+      使用 border-box 可以更简单地控制元素的尺寸。
+    */
+    box-sizing:border-box ;
+    color:rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    height: 35px;
+    width: 250px;
+    background: rgba(255,255,255,0.6);
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius: 12px;
+    transition: 0.2s;
+    /*
+        该代码用于定义元素的轮廓样式，设置为无轮廓。
+    */
+    outline:none;
+    padding: 0 10px;
+}
+.box .input-box > input:focus{
+    border-color: rgb(157, 203, 223);
+}
+
+/* 定义输入框在获得* 定义按钮盒子的样式 */
+.box .btn-box{
+    width: 250px;
+    display: flex;
+    /* 设置主轴方向为列，排列子元素为垂直方向 */
+    flex-direction: column;
+    /* 设置项目在主轴（横向）上居中对齐 */
+    justify-content: center;
+    /* 设置弹性容器中项目的对齐方式为起始位置 */
+    align-items: start;
+    
+}
+
+/* 该类定义了登录页面按钮的样式 */
+.box .btn-box > a {
+    font-size: 14px; /* 设置字体大小 */
+    text-decoration: none; /* 去掉文本的下划线 */
+    color:rgba(255,255,255,0.9); /* 设置文本颜色，带有透明度 */
+    transition: 0.2s; /* 设置过渡效果的时间 */
+    width: 250px; /* 设置按钮的宽度 */
+    text-align: end; /* 设置文本对齐方式 */
+}
+
+/* 此样式定义链接在悬停状态下的文本颜色 */
+.box .btn-box > a:hover {
+    color:rgba(255,255,255,1);
+}
+
+/* 定义按钮盒子内部 div 的样式 */
+.box .btn-box > div{
+    display: flex; /* 使用弹性盒子布局 */
+    flex-direction: row; /* 设定排列方向为横向 */
+    justify-content: center; /* 水平居中对齐内容 */
+    align-items: start; /* 垂直对齐内容到开始位置 */
+    margin-top: 20px; /* 上外边距设为 20 像素 */
+}
+
+/* 定义按钮的样式 */
+.box .btn-box > div > button{
+    width: 120px;
+    height: 35px;
+    border: 1px solid rgba(255,235,205,0.5);
+    background: rgba(255,235,205,0.9);
+    border-radius: 12px;
+    
+}
+/* 为按钮设置样式 */
+.box .btn-box > div > button:nth-of-type(2){
+    margin-left: 10px; /* 设置左外边距为10像素 */
+}
+
+/* 这是用于按钮的悬停效果样式 */
+.box .btn-box > div > button:hover{
+    border: 1px solid rgba(255,245,238, 0.5);
+    background: rgba(255,245,238, 0.9);
+}
+img{
+    display:flex;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 1.5%;
+    left: 1%;
+}
+/* img{
+    width: 100px;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+} */

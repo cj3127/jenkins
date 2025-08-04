@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>账号注册</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="box">
+        <h2>账号注册</h2>
+        <div class="input-box">
+            <label>账号</label>
+            <input type="text">
+        </div>
+        <div class="input-box">
+            <label>密码</label>
+            <input type="password">
+        </div>
+        <div class="btn-box">
+            <div>
+                <button id="zhuce">确认注册</button>
+                <button id="fanhui">返回登录</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+document.getElementById("zhuce").onclick = function(){
+    alert("注册成功！");
+}
+document.getElementById("fanhui").onclick = function(){
+    window.location.href = "login.html"; // 替换为实际注册页面的URL
+}
+</script>
+</html>
